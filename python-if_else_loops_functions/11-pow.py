@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 def pow(a, b):
-    sum = a ^ b
-    return sum
+    result = 1
+    for _ in range(b):
+        result *= a
+    return result
