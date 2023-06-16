@@ -16,6 +16,19 @@ And after u can use add_integer() for testing like this:
 >>> add_integer(2)
 100
 
+>>> add_integer(2, 0)
+2
+
+>>> add_integer(-2, -2)
+
+>>> add_integer('2', 9)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
 >>> add_integer(2, '9')
 Traceback (most recent call last):
 TypeError: b must be an integer
+
+>>> add_integer("not_int", "not_int")
+Traceback (most recent call last):
+TypeError: a must be an integer
