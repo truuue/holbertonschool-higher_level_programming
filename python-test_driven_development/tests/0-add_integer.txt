@@ -1,0 +1,21 @@
+
+0-add_integer.py user guide
+===========================
+
+In first u need too import like this:
+>>> add_integer = __import__('0-add_integer').add_integer
+
+And after u can use add_integer() for testing like this:
+
+>>> add_integer(2, 3)
+5
+
+>>> add_integer(1.5, 4)
+5
+
+>>> add_integer(2)
+100
+
+>>> add_integer(2, '9')
+Traceback (most recent call last):
+TypeError: b must be an integer
