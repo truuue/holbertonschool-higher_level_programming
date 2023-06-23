@@ -4,6 +4,7 @@
 
 class BaseGeometry:
     """A geometry module"""
+
     def area(self):
         raise Exception("area() is not implemented")
 
@@ -15,9 +16,11 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
-    """Class that inherits from basegeometry"""
+    """A rectangle class heriting from BaseGeometry"""
+
     def __init__(self, width, height):
-        BaseGeometry.integer_validator(self, "width", width)
-        BaseGeometry.integer_validator(self, "height", height)
+        """A constructor method that init a new rectangle object"""
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
         self.__width = width
         self.__height = height
