@@ -5,4 +5,4 @@ class MyList(list):
     """A class that ineriths from a list"""
     def print_sorted(self):
         """This is a public instance method"""
-        return sorted(self)
+        print(sorted(self))
