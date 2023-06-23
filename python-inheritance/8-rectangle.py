@@ -20,7 +20,7 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """A constructor method that init a new rectangle object"""
-        super().integer_validator("width", width)
         super().integer_validator("height", height)
+        super().integer_validator("width", width)
         self.__width = width
         self.__height = height
