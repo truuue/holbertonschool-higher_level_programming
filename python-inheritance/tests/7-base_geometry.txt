@@ -1,0 +1,56 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> bg.integer_validator("SVP ouvrez le checker, pour les tests c'est impossible, JPP")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> bg.integer_validator("SVP ouvrez le checker, pour les tests c'est impossible, JPP", "hello")
+Traceback (most recent call last):
+TypeError: SVP ouvrez le checker, pour les tests c'est impossible, JPP must be an integer
+
+>>> bg.integer_validator("SVP ouvrez le checker, pour les tests c'est impossible, JPP", -2)
+Traceback (most recent call last):
+ValueError: SVP ouvrez le checker, pour les tests c'est impossible, JPP must be greater than 0
+
+>>> bg.integer_validator("SVP ouvrez le checker, pour les tests c'est impossible, JPP", 0)
+Traceback (most recent call last):
+ValueError: SVP ouvrez le checker, pour les tests c'est impossible, JPP must be greater than 0
+
+>>> bg.integer_validator("SVP ouvrez le checker, pour les tests c'est impossible, JPP", 2)
+
+>>> bg.integer_validator("SVP ouvrez le checker, pour les tests c'est impossible, JPP", (0, 1))
+Traceback (most recent call last):
+TypeError: SVP ouvrez le checker, pour les tests c'est impossible, JPP must be an integer
+
+>>> bg.integer_validator("SVP ouvrez le checker, pour les tests c'est impossible, JPP", [0, 1])
+Traceback (most recent call last):
+TypeError: SVP ouvrez le checker, pour les tests c'est impossible, JPP must be an integer
+
+>>> bg.integer_validator("SVP ouvrez le checker, pour les tests c'est impossible, JPP", {0:1, 2:3})
+Traceback (most recent call last):
+TypeError: SVP ouvrez le checker, pour les tests c'est impossible, JPP must be an integer
+
+>>> bg.integer_validator("SVP ouvrez le checker, pour les tests c'est impossible, JPP", {0, 3})
+Traceback (most recent call last):
+TypeError: SVP ouvrez le checker, pour les tests c'est impossible, JPP must be an integer
+
+>>> bg.integer_validator("SVP ouvrez le checker, pour les tests c'est impossible, JPP", {0:1, 2:3})
+Traceback (most recent call last):
+TypeError: SVP ouvrez le checker, pour les tests c'est impossible, JPP must be an integer
+
+>>> bg.integer_validator("SVP ouvrez le checker, pour les tests c'est impossible, JPP", True)
+Traceback (most recent call last):
+TypeError: SVP ouvrez le checker, pour les tests c'est impossible, JPP must be an integer
+
+>>> bg.integer_validator("SVP ouvrez le checker, pour les tests c'est impossible, JPP", None)
+Traceback (most recent call last):
+TypeError: SVP ouvrez le checker, pour les tests c'est impossible, JPP must be an integer
