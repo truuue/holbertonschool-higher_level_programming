@@ -2,6 +2,7 @@
 """That's a module that ineriths from a list"""
 
 class MyList(list):
+    """A class that ineriths from a list"""
     def print_sorted(self):
-        """This is the function"""
+        """This is a public instance method"""
         return sorted(self)
