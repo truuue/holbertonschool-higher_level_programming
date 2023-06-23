@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""That's a module for return a list of availables attributes"""
+"""That's a module that ineriths from a list"""
 
-
-def print_sorted(self):
-    """This is the function"""
-    return sorted(self)
+class MyList(list):
+    def print_sorted(self):
+        """This is the function"""
+        return sorted(self)
