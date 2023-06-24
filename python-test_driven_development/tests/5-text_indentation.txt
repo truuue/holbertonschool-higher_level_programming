@@ -1,0 +1,47 @@
+The ``5-text_indentation`` file
+======================
+
+Using ``text_indentation``
+-------------------
+
+This is a text file in reStructuredText format for testing.  First import
+``text_indentation`` from the ``5-text_indentation`` file:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+
+    >>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum elit sed massa vulputate, eu scelerisque libero pellentesque. Duis augue dolor, ullamcorper et porta id, lacinia eget orci: Fusce dolor quam, malesuada sit amet ultrices ut, feugiat a orci? Phasellus dapibus vel tortor eget molestie.")
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <BLANKLINE>
+    Fusce condimentum elit sed massa vulputate, eu scelerisque libero pellentesque.
+    <BLANKLINE>
+    Duis augue dolor, ullamcorper et porta id, lacinia eget orci:
+    <BLANKLINE>
+    Fusce dolor quam, malesuada sit amet ultrices ut, feugiat a orci?
+    <BLANKLINE>
+    Phasellus dapibus vel tortor eget molestie.
+    <BLANKLINE>
+
+    >>> text_indentation(2)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit, fusce condimentum elit sed massa vulputate, eu scelerisque libero")
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, fusce condimentum elit sed massa vulputate, eu scelerisque libero
+
+    >>> text_indentation(":")
+    :
+    <BLANKLINE>
+
+    >>> text_indentation(":?.")
+    :
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    .
+    <BLANKLINE>
