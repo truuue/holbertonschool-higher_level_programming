@@ -1,34 +1,31 @@
+The ``0-add_integer`` file
+======================
 
-0-add_integer.py user guide
-===========================
+Using ``add_integer``
+-------------------
 
-In first u need too import like this:
->>> add_integer = __import__('0-add_integer').add_integer
+This is a text file in reStructuredText format for testing.  First import
+``add_integer`` from the ``0-add_integer`` file:
 
-And after u can use add_integer() for testing like this:
+	>>> add_integer = __import__("0-add_integer").add_integer
 
->>> add_integer(2, 3)
-5
-
->>> add_integer(1.5, 4)
-5
-
->>> add_integer(2)
-100
-
->>> add_integer(2, 0)
-2
-
->>> add_integer(-2, -2)
-
->>> add_integer('2', 9)
-Traceback (most recent call last):
-TypeError: a must be an integer
-
->>> add_integer(2, '9')
-Traceback (most recent call last):
-TypeError: b must be an integer
-
->>> add_integer("not_int", "not_int")
-Traceback (most recent call last):
-TypeError: a must be an integer
+Now use it
+	>>> add_integer(2, 3)
+    	5
+    	>>> add_integer(5.5, 2)
+    	7
+    	>>> add_integer(4)
+    	102
+	>>> add_integer(-4, -4)
+	8
+	>>> add_integer(4, 0)
+	4
+    	>>> add_integer('1', 2)
+    	Traceback (most recent call last):
+    	TypeError: a must be an integer
+	>>> add_integer(1, '2')
+    	Traceback (most recent call last):
+    	TypeError: b must be an integer
+	>>> add_integer("hola", "mundo")
+    	Traceback (most recent call last):
+    	TypeError: a must be an integer
