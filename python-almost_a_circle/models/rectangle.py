@@ -67,5 +67,6 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
+        """A simple function that print the exact number of #"""
         for _ in range(self.height):
             print("#" * self.width)
