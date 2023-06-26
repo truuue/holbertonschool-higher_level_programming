@@ -70,3 +70,8 @@ class Rectangle(Base):
         """A simple function that print the exact number of #"""
         for _ in range(self.height):
             print("#" * self.width)
+
+    def __str__(self):
+        """A simple function that use __str__ method"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height)
