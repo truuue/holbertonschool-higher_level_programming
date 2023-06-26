@@ -72,6 +72,7 @@ class Rectangle(Base):
             print("#" * self.width)
 
     def diplay(self):
+        """A simple function that print the exact number of #"""
         for _ in range(self.y):
             print()
         for _ in range(self.height):
