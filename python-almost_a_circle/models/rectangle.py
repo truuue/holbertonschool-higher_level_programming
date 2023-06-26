@@ -71,6 +71,12 @@ class Rectangle(Base):
         for _ in range(self.height):
             print("#" * self.width)
 
+    def diplay(self):
+        for _ in range(self.y):
+            print()
+        for _ in range(self.height):
+            print(" " * self.x + "#" * self.width)
+
     def __str__(self):
         """A simple function that use __str__ method"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
