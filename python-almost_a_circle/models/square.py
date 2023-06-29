@@ -34,13 +34,3 @@ class Square(Rectangle):
         """A simple function that use __str__ method"""
         return "[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.width)
-
-    def to_dictionary(self):
-        """Return a dictionary representation of the rectangle"""
-        return {
-            "id": self.id,
-            "width": self.width,
-            "height": self.height,
-            "x": self.x,
-            "y": self.y,
-        }
