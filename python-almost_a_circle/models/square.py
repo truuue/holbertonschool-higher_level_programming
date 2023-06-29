@@ -21,4 +21,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """A simple function that use __str__ method"""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(
+            self.id, self.x, self.y, self.width)
