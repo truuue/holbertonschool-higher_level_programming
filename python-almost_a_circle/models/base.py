@@ -9,6 +9,8 @@ class Base:
     """Base class"""
 
     __nb_objects = 0
+    screen = None
+    turtle = None
 
     def __init__(self, id=None):
         """Initialize a Base instance"""
@@ -66,3 +68,22 @@ class Base:
                 return [cls.create(**obj) for obj in obj_list]
         except FileNotFoundError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Open a window and draw all the Rectangles and Squares"""
+        if Base.screen is None:
+            Base.screen = turtle.Screen()
+        if Base.turtle is None:
+            Base.turtle = turtle.Turtle()
+
+        Base.screen.clear()
+        Base.turtle.clear()
+
+        for rect in list_rectangles:
+            Base.draw_rectangle(rect)
+
+        for square in list_squares:
+            Base.draw_square(square)
+
+        Base.screen.exitonclick()
