@@ -21,6 +21,10 @@ if __name__ == "__main__":
         """SELECT * FROM states WHERE BINARY name
         LIKE 'N%' ORDER BY states.id ASC""")
     rows = cursor.fetchall()
+    printed_states = set()
     for row in rows:
-        print(row)
+        state_id, state_name = row
+        if state_name not in printed_states:
+            print(row)
+            printed_states.add(state_name)
     db.close()
