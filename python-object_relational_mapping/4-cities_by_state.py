@@ -25,7 +25,7 @@ if __name__ == "__main__":
     rows = cursor.fetchall()
     printed_states = set()
     for row in rows:
-        state_id, state_name = row
+        city_id, city_name, state_name = row
         if state_name not in printed_states:
             print(row)
             printed_states.add(state_name)
