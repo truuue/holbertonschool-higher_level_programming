@@ -23,7 +23,11 @@ if __name__ == "__main__":
         ON cities.state_id = states.id
         ORDER BY cities.id""")
     rows = cursor.fetchall()
+    printed_states = set()
     for row in rows:
-        print(row)
+        state_id, state_name = row
+        if state_name not in printed_states:
+            print(row)
+            printed_states.add(state_name)
     cursor.close()
     db.close()
