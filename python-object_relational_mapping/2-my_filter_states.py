@@ -19,8 +19,8 @@ if __name__ == "__main__":
         passwd=passwd_db,
         db=name_db)
     cursor = db.cursor()
-    query = """SELECT * FROM states WHERE states.name LIKE BINARY
-    '{}' ORDER BY states.id""".format(state_name)
+    query = """SELECT * FROM states WHERE name LIKE BINARY
+    '{}' ORDER BY id ASC""".format(state_name)
     cursor.execute(query)
     rows = cursor.fetchall()
     printed_states = set()
