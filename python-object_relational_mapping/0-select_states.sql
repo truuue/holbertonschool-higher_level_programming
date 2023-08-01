@@ -1,4 +1,3 @@
--- Active: 1690891313168@@127.0.0.1@3306@hbtn_0e_0_usa
 -- Create states table in hbtn_0e_0_usa with some data
 CREATE DATABASE IF NOT EXISTS hbtn_0e_0_usa;
 USE hbtn_0e_0_usa;
