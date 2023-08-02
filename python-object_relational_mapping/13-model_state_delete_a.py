@@ -20,7 +20,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    remove_a_state = session.query(State).filter(State.name.like('%a%')).delete()
+    rmv_a_state = session.query(State).filter(State.name.like('%a%')).delete()
 
     session.commit()
     session.close()
