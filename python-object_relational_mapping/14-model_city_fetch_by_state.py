@@ -25,5 +25,4 @@ if __name__ == "__main__":
     for state, city in c_data:
         print(f"{state.name}: ({city.id}) {city.name}")
 
-    session.commit()
     session.close()
